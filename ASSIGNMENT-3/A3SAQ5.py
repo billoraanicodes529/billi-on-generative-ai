@@ -17,8 +17,7 @@ prompt = (
     "A:"
 )
 
-result = model(prompt, max_new_tokens=20, temperature=0.0)
+result = model(prompt, max_new_tokens=20)
 
 print("Few-Shot Arithmetic Question:")
-print(prompt.replace("\nA:", "\nAnswer:"))
 print("\nPredicted Answer:", result[0]["generated_text"].strip())
