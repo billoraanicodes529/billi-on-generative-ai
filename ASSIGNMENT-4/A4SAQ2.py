@@ -10,7 +10,7 @@ from transformers import pipeline
 
 generator = pipeline("text2text-generation", model="google/flan-t5-base")
 
-file_path = "resume123.docx"  
+file_path = "resume2.docx"  
 document = Document(file_path)
 
 resume_text = ""
@@ -25,7 +25,6 @@ Resume:
 {resume_text}
 """
 
-# Generate output
 result = generator(
     prompt,
     max_length=150,

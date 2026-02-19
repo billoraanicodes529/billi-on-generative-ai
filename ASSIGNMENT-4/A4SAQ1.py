@@ -11,7 +11,7 @@ import re
 
 llm = pipeline("text2text-generation", model="google/flan-t5-base")
 
-doc = Document("resume.docx")
+doc = Document("resume1.docx")
 text = "\n".join(p.text for p in doc.paragraphs)
 
 phone = re.findall(r"\b\d{10}\b", text)
